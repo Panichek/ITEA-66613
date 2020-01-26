@@ -9,8 +9,8 @@ public class HomeClient2 {
     public static void main(String[] args) {
         try {
             Socket s2 = new Socket(InetAddress.getByName("127.0.0.1"), 1234);
-            String data = "client2 hello";
-            //OutputStream os = s2.getOutputStream();
+            String data = "client2 hello!";
+            OutputStream os = s2.getOutputStream();
             s2.getOutputStream().write(data.getBytes());
             byte[] buf = new byte[0];
             int r = s2.getInputStream().read(buf);

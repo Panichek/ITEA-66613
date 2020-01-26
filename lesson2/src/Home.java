@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.URL;
+import java.io.*;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -52,62 +52,63 @@ public class Home extends JFrame {
         panel.add(textField3);
 
         ActionListener actionListener = new TestActionListener();
-        button1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String language = "ua";
-                String country = "UA";
-                Locale locale = new Locale(language, country);
-                ResourceBundle bundle =
-                        ResourceBundle.getBundle("Ua",
-                                locale);
-                System.out.println(locale + "; Name=" +
-                        bundle.getString("name"));
-                textField1.setText(e.getActionCommand());
-            }
+        button1.addActionListener(e -> {
+            String language = "ua";
+            String country = "UA";
+            Locale locale = new Locale(language, country);
+            ResourceBundle bundle =
+                    ResourceBundle.getBundle("Ua",
+                            locale);
+            System.out.println(locale + "; Name=" +
+                    bundle.getString("name"));
+            textField1.setText(e.getActionCommand());
         });
 
-        button2.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String language = "en";
-                String country = "EN";
-                Locale locale = new Locale(language, country);
-                ResourceBundle bundle =
-                        ResourceBundle.getBundle("Eng",
-                                locale);
-                System.out.println(locale + "; Name=" +
-                        bundle.getString("name"));
-                textField2.setText(e.getActionCommand());
-            }
+        button2.addActionListener(e -> {
+            String language = "en";
+            String country = "EN";
+            Locale locale = new Locale(language, country);
+            ResourceBundle bundle =
+                    ResourceBundle.getBundle("Eng",
+                            locale);
+            System.out.println(locale + "; Name=" +
+                    bundle.getString("name"));
+            textField2.setText(e.getActionCommand());
         });
 
-        button3.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String language = "ru";
-                String country = "Ru";
-                Locale locale = new Locale(language, country);
-                ResourceBundle bundle =
-                        ResourceBundle.getBundle("Ru",
-                                locale);
-                System.out.println(locale + "; Name=" +
-                        bundle.getString("name"));
-                textField3.setText(e.getActionCommand());
-            }
+        button3.addActionListener(e -> {
+            String language = "ru";
+            String country = "Ru";
+            Locale locale = new Locale(language, country);
+            ResourceBundle bundle =
+                    ResourceBundle.getBundle("Ru",
+                            locale);
+            System.out.println(locale + "; Name=" +
+                    bundle.getString("name"));
+            textField3.setText(e.getActionCommand());
         });
         JButton button4 = new JButton("Load");
-        button4.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser fileopen = new JFileChooser();
-                int ret1 = fileopen.showDialog(null, "Відкрити файл");
-
+        button4.addActionListener(e -> {
+            JFileChooser fileopen = new JFileChooser();
+            int ret1 = fileopen.showDialog(fileopen, "Відкрити файл");
+            try {
+                FileInputStream fis = new FileInputStream(String.valueOf(ret1));
+            } catch (FileNotFoundException ex) {
+                ex.printStackTrace();
             }
+            //FileReader reader = new FileReader();
         });
         panel.add(button4);
         JButton button5 = new JButton("Save");
-        button5.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser filesave = new JFileChooser();
-                int ret2 = filesave.showDialog(null, "Зберегти файл");
+        button5.addActionListener(e -> {
+            JFileChooser filesave = new JFileChooser();
+            int ret2 = filesave.showDialog(filesave, "Зберегти файл");
+            try {
+                FileOutputStream fos = new FileOutputStream(String.valueOf(ret2)) ;
+            } catch (FileNotFoundException ex) {
+                ex.printStackTrace();
             }
+            // FileWriter writer = new FileWriter();
         });
         panel.add(button5);
         getContentPane().add(panel);
@@ -123,17 +124,15 @@ public class Home extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    JFrame.setDefaultLookAndFeelDecorated(true);
-                    Home frame = new Home();
-                    frame.pack();
-                    frame.setLocationRelativeTo(null);
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        SwingUtilities.invokeLater(() -> {
+            try {
+                JFrame.setDefaultLookAndFeelDecorated(true);
+                Home frame = new Home();
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }

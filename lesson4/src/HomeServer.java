@@ -24,7 +24,7 @@ public class HomeServer extends Thread {
             new HomeServer(++connection, ss.accept());
             System.out.println("Connected" + connection);
             //Socket client = ss.accept();
-            //client.getOutputStream().write(999);
+            //client.getOutputStream().write(111);
             //client.close();
             //ss.close();
         } catch (IOException e) {
@@ -39,7 +39,7 @@ public class HomeServer extends Thread {
             byte[] buf = new byte[64 * 1024];
             int r = is.read(buf);
             String data = new String(buf, 0, r);
-            System.out.println("Accept" + data);
+            System.out.println("Accept " + data);
             data = "Hello from server";
             os.write(data.getBytes());
         } catch (IOException e) {

@@ -69,7 +69,7 @@ public class Home {
                             if (type.equals("Папка с файлами")) {
 
                                 FileTableModel.navigation(FileTableModel.getDirName() + "/" + way, table);
-                                System.out.println(FileTableModel.getDirName().toString());
+                                System.out.println(FileTableModel.getDirName());
                                 doudleclick = 0;
                             }
                         }
@@ -105,12 +105,11 @@ class FileTableModel extends AbstractTableModel {
     protected static Vector<String> last = new Vector<>();  //Вектор зберігання шляху  останньої дир.
 
     protected String[] columnNames = new String[]{    //Назви колонок таблиці
-            "назва", "розмір", "дата" , "тип"
+            "назва","розмір","дата","тип"
     };
 
     protected Class[] columnClasses = new Class[]{    //Типи колонок таблиці
             String.class, Long.class, Date.class, String.class
-
     };
 
     public FileTableModel(File dir) {
@@ -151,7 +150,6 @@ class FileTableModel extends AbstractTableModel {
         return dir.toString();
     }
 
-
     public static void addWay(String BackWay) {
         back.add(BackWay);
     }
@@ -166,7 +164,6 @@ class FileTableModel extends AbstractTableModel {
         System.err.println(back.lastElement());
         return s;
     }
-
 
     public static String getNextWay() {
         back.add(back.lastElement() + last.lastElement());
@@ -184,4 +181,3 @@ class FileTableModel extends AbstractTableModel {
         return table;
     }
 }
-
