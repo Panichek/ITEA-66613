@@ -23,9 +23,9 @@ public class HomeServer extends Thread {
             System.out.println("Start, waiting...");
             new HomeServer(++connection, ss.accept());
             System.out.println("Connected" + connection);
-            //Socket client = ss.accept();
-            //client.getOutputStream().write(111);
-            //client.close();
+            Socket client = ss.accept();
+            client.getOutputStream().write(111);
+            client.close();
             //ss.close();
         } catch (IOException e) {
             e.printStackTrace();
