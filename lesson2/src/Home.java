@@ -6,10 +6,13 @@ import java.io.*;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class Home extends JFrame {
+public class Home extends JFrame implements Serializable {
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
+    private String language;
+    private String country;
+    private Object str;
 
     public Home() {
         super("Home");
@@ -23,7 +26,7 @@ public class Home extends JFrame {
         panel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
         JButton button1 = new JButton();
-        ImageIcon icon1 = new ImageIcon("D:\\ITEA66613\\lesson2\\Номе_pic\\ukraine_flag_labels_03_64.png");
+        ImageIcon icon1 = new ImageIcon("lesson2\\Номе_pic\\ukraine_flag_labels_03_64.png");
         button1.setIcon(icon1);
         button1.setActionCommand("Кнопка натиснута!");
         panel.add(button1);
@@ -33,7 +36,7 @@ public class Home extends JFrame {
         panel.add(textField1);
 
         JButton button2 = new JButton();
-        ImageIcon icon2 = new ImageIcon("D:\\ITEA66613\\lesson2\\Номе_pic\\united_kingdom_flag_labels_03_64.png");
+        ImageIcon icon2 = new ImageIcon("lesson2\\Номе_pic\\united_kingdom_flag_labels_03_64.png");
         button2.setIcon(icon2);
         button2.setActionCommand("Button was pressed!");
         panel.add(button2);
@@ -42,7 +45,7 @@ public class Home extends JFrame {
         panel.add(textField2);
 
         JButton button3 = new JButton();
-        ImageIcon icon3 = new ImageIcon("D:\\ITEA66613\\lesson2\\Номе_pic\\russia_flag_labels_03_64.png");
+        ImageIcon icon3 = new ImageIcon("lesson2\\Номе_pic\\russia_flag_labels_03_64.png");
         button3.setIcon(icon3);
 
         button3.setActionCommand("Кнопка нажата!");
@@ -91,24 +94,25 @@ public class Home extends JFrame {
         button4.addActionListener(e -> {
             JFileChooser fileopen = new JFileChooser();
             int ret1 = fileopen.showDialog(fileopen, "Відкрити файл");
-            try {
-                FileInputStream fis = new FileInputStream(String.valueOf(ret1));
-            } catch (FileNotFoundException ex) {
+            try(DataInputStream dis=new DataInputStream(new FileInputStream("lesson2\\data.bin"));){
+                File file=new File(dis.readUTF());
+
+            } catch (IOException ex) {
                 ex.printStackTrace();
             }
-            //FileReader reader = new FileReader();
+
         });
         panel.add(button4);
         JButton button5 = new JButton("Save");
         button5.addActionListener(e -> {
             JFileChooser filesave = new JFileChooser();
             int ret2 = filesave.showDialog(filesave, "Зберегти файл");
-            try {
-                FileOutputStream fos = new FileOutputStream(String.valueOf(ret2)) ;
-            } catch (FileNotFoundException ex) {
+            try(DataOutputStream dos=new DataOutputStream(new FileOutputStream("lesson2\\data.bin"));){
+              // File file=new File(dos.writeUTF());
+            }catch(IOException ex) {
                 ex.printStackTrace();
             }
-            // FileWriter writer = new FileWriter();
+
         });
         panel.add(button5);
         getContentPane().add(panel);

@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce6458da-72c9-4c5e-bebf-8812dd94a804" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson4/src/HomeStreamList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson2/data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson2/pudge.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson2/purge.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson2/purge2.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pudge.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson4/src/HomeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/src/HomeServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lesson4/HomeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lesson4/HomeServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson2/src/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2/src/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/lesson5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lesson2/Home$TestActionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lesson2/Home$TestActionListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lesson2/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lesson2/Home.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +48,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java_Essential" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ITEA66613\lesson2\src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ITEA66613\lesson2" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ITEA66613\lesson2\src" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.HomeStreamList">
+  <component name="RunManager" selected="Application.Home">
     <configuration name="Home" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Home" />
       <module name="lesson2" />
@@ -63,9 +70,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HomeClient" />
-      <module name="lesson4" />
+    <configuration name="Home2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Home2" />
+      <module name="lesson2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,11 +100,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Home" />
+        <item itemvalue="Application.Home2" />
         <item itemvalue="Application.HomeStreamList" />
         <item itemvalue="Application.HomeServer" />
         <item itemvalue="Application.HomeClient2" />
-        <item itemvalue="Application.HomeClient" />
-        <item itemvalue="Application.Home" />
       </list>
     </recent_temporary>
   </component>
@@ -129,12 +136,18 @@
       <workItem from="1580229552175" duration="1888000" />
       <workItem from="1580246217864" duration="520000" />
       <workItem from="1580318433698" duration="1310000" />
-      <workItem from="1580319813953" duration="204000" />
+      <workItem from="1580319813953" duration="748000" />
+      <workItem from="1580402196243" duration="650000" />
+      <workItem from="1580568986822" duration="2581000" />
+      <workItem from="1580571595685" duration="3176000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bin" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -144,38 +157,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="74" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1580044372643" />
-    <state x="549" y="223" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580047728059">
+    <state x="549" y="223" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580570446684">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="223" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1580047728059" />
+    <state x="549" y="223" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1580570446684" />
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1579952782939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1579952782939" />
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580572950406">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1580572950406" />
     <state x="406" y="10" key="CommitChangelistDialog2" timestamp="1580048378120">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="406" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580048378120" />
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1580230706928">
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1580574861930">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1580230706928" />
-    <state width="746" height="115" key="GridCell.Tab.0.bottom" timestamp="1580319980418">
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1580574861930" />
+    <state width="767" height="119" key="GridCell.Tab.0.bottom" timestamp="1580575992019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580319980418" />
-    <state width="746" height="115" key="GridCell.Tab.0.center" timestamp="1580319980417">
+    <state width="767" height="119" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580575992019" />
+    <state width="767" height="119" key="GridCell.Tab.0.center" timestamp="1580575992019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580319980417" />
-    <state width="746" height="115" key="GridCell.Tab.0.left" timestamp="1580319980416">
+    <state width="767" height="119" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580575992019" />
+    <state width="767" height="119" key="GridCell.Tab.0.left" timestamp="1580575992019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580319980415" />
-    <state width="746" height="115" key="GridCell.Tab.0.right" timestamp="1580319980417">
+    <state width="767" height="119" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580575992019" />
+    <state width="767" height="119" key="GridCell.Tab.0.right" timestamp="1580575992019">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="746" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580319980417" />
+    <state width="767" height="119" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580575992019" />
     <state x="498" y="314" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1580044775230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -184,14 +201,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1580246716798" />
-    <state x="499" y="175" key="extract.method.dialog" timestamp="1580048124553">
+    <state x="499" y="175" key="extract.method.dialog" timestamp="1580570663095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="175" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1580048124553" />
-    <state x="209" y="39" key="new project wizard" timestamp="1580042844577">
+    <state x="499" y="175" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1580570663095" />
+    <state x="209" y="39" key="new project wizard" timestamp="1580402218996">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="39" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1580042844577" />
+    <state x="209" y="39" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1580402218996" />
     <state x="431" y="145" key="search.everywhere.popup" timestamp="1580059514879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
