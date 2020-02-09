@@ -19,8 +19,8 @@ public class Starter extends Thread {
         System.out.println(thread1.getStackTrace() + ": " + thread2.getInt() );
         int summ1 = sum(thread1.getInt());
         int summ2 = sum(thread2.getInt());
-        System.out.println(thread1.getStackTrace() + "  ÑÑƒÐ¼Ð¼Ð°1: " + summ1);
-        System.out.println(thread2.getStackTrace() + "  ÑÑƒÐ¼Ð¼Ð°2: " + summ2);
+        System.out.println(thread1.getStackTrace() + "  ïîòîê1: " + summ1);
+        System.out.println(thread2.getStackTrace() + "  ïîòîê2: " + summ2);
 
         if (summ1 > summ2) {
             System.out.println("thread1 victory");
