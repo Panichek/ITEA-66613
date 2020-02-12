@@ -3,6 +3,7 @@ public class MainThread {
     public static void main(String[] args) {
         HomePhaser phsr = new HomePhaser(1, 5);
         System.out.println(" Зaпycк  потоков\n ");
+
         new ManThread(phsr, "А");
         new ManThread(phsr, "В");
         new ManThread(phsr, "С");
